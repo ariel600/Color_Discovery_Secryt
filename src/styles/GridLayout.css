@@ -1,0 +1,45 @@
+.main {
+    background-color: rgb(36, 69, 129);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-self: center;
+    padding: 40px;
+}
+
+.title {
+    color: red;
+    font-size: 40px;
+}
+
+.table {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 2px;
+    grid-template-columns: repeat(10, 45px);
+    grid-template-rows: repeat(10, 45px);
+    background-color: rgb(156, 156, 156);
+    border-radius: 5px;
+    box-shadow: 0 0 20px 2px gray;
+}
+
+.cell {
+    width: 92%;
+    height: 92%;
+    background-color: rgb(66, 66, 66);
+    box-shadow: -2px -2px 1px black inset;
+}
+
+.cell:hover {
+    width: 102%;
+    height: 102%;
+}
+
+.click {
+    font-size: 55px;
+    color: white;
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 0 0 10px black;
+}
