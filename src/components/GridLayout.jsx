@@ -50,7 +50,7 @@ export default function GridLayout() {
       </div>
       <p className="click" >Clicks: {counter}</p>
       <p className={status}>{textStatus}</p>
-      <button type="submit" className={`${status}-button`} onClick={() => location.reload()}>New Game</button>
+      <button type="submit" className={`${status}-button`} onClick={() => location.reload()} >New Game</button>
     </div>
   )
 }
