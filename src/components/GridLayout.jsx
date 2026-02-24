@@ -7,19 +7,19 @@ export default function GridLayout() {
   const [textStatus, setTextStatus] = useState("")
   const [status, setStatus] = useState("status-false")
   const cecret = useRef(Math.floor(Math.random() * 100) + 1)
-  // const color = useRef(randomColor())
+  const color = useRef(randomColor())
 
   const board = []
   for (let i = 1; i < 101; i++) {
     board.push(i)
   }
 
-  // function randomColor() {
-  //   const r = Math.floor(Math.random() * 256)
-  //   const g = Math.floor(Math.random() * 256)
-  //   const b = Math.floor(Math.random() * 256)
-  //   return `rgb(${r}, ${g}, ${b})`
-  // }
+  function randomColor() {
+    const r = Math.floor(Math.random() * 256)
+    const g = Math.floor(Math.random() * 256)
+    const b = Math.floor(Math.random() * 256)
+    return `rgb(${r}, ${g}, ${b})`
+  }
 
   function onClick(event, key) {
     if (event.target.className === "x") return
@@ -30,7 +30,7 @@ export default function GridLayout() {
       setTextStatus("Keep Searching!")
       event.target.textContent = 'X'
     } else {
-      // event.target.style.backgroundColor = randomColor()
+      event.target.style.backgroundColor = color.current
       setStatus("status-true")
       setTextStatus("You have a victory! 🤩")
       event.target.className = 'cell v'
@@ -39,7 +39,7 @@ export default function GridLayout() {
 
   return (
     <div className="main">
-      <h1 className="title">Find the secret color! <div className="divColor" style={{ backgroundColor: "greenyellow" }}></div></h1>
+      <h1 className="title">Find the secret color! <div className="divColor" style={{ backgroundColor: color.current }}></div></h1>
       <div className="table">
         {board.map((num) => (
           <div key={num} className={num === cecret ? "secret" : "cell"} onClick={e => {
