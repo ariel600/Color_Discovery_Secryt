@@ -6,15 +6,12 @@ export default function GridLayout() {
   const [counter, setCounter] = useState(0)
   const [textStatus, setTextStatus] = useState("")
   const [status, setStatus] = useState("status-false")
-  const [create, useCreate] = useState(create())
   const cecret = useRef(Math.floor(Math.random() * 100) + 1)
   // const color = useRef(randomColor())
 
-  function create() {
-    const board = []
-    for (let i = 1; i < 101; i++) {
-      board.push(i)
-    }
+  const board = []
+  for (let i = 1; i < 101; i++) {
+    board.push(i)
   }
 
   // function randomColor() {
@@ -53,7 +50,7 @@ export default function GridLayout() {
       </div>
       <p className="click" >Clicks: {counter}</p>
       <p className={status}>{textStatus}</p>
-      <button type="submit" className={`${status}-button`} onClick={useCreate(create())}>New Game</button>
+      <button type="submit" className={`${status}-button`} onClick={() => location.reload()}>New Game</button>
     </div>
   )
 }
