@@ -1,0 +1,168 @@
+.main {
+    background-color: rgb(36, 69, 129);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-self: center;
+    padding: 40px;
+}
+
+.title {
+    color: white;
+    font-size: 40px;
+}
+
+.divColor{
+    display: inline-block;
+}
+
+.table {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 2px;
+    grid-template-columns: repeat(10, 45px);
+    grid-template-rows: repeat(10, 45px);
+    background-color: rgb(156, 156, 156);
+    border-radius: 5px;
+    box-shadow: 0 0 20px 2px gray;
+}
+
+.cell,
+.x {
+    text-align: center;
+    align-content: center;
+    width: 92%;
+    height: 92%;
+    background-color: rgb(66, 66, 66);
+    box-shadow: -2px -2px 1px black inset;
+    border-radius: 5px;
+}
+
+.cell:hover {
+    width: 102%;
+    height: 102%;
+}
+
+.click {
+    font-size: 55px;
+    color: white;
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 0 0 10px black;
+}
+
+.cecret {
+    background-color: rgb(47, 206, 206);
+}
+
+.x {
+  color: red;
+    background-color: rgb(36, 36, 36);
+}
+
+.v {
+    background-color: greenyellow;
+    box-shadow: 0 0 50px 10px green;
+    z-index: 1;
+}
+
+.status-true {
+    font-family: cursive;
+    font-size: 55px;
+    margin: 0;
+    color: greenyellow;
+    text-shadow: 0 0 20px yellow;
+}
+
+.status-false {
+    font-size: 45px;
+    margin: 0;
+    color: red;
+}
+
+.status-false-button {
+    display: none;
+}
+.status-true-button {
+    display: inline;
+}
+
+.status-true-button {
+  margin-top: 25px;
+  position: relative;
+  width: 150px;
+  height: 55px;
+  border-radius: 45px;
+  border: none;
+  background-color: rgb(151, 95, 255);
+  color: white;
+  box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+  0px 5px 10px rgba(5, 5, 5, 0.212),
+  0px -10px 10px rgb(124, 54, 255) inset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-true-button::before {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.678);
+  content: "";
+  filter: blur(1px);
+  top: 7px;
+  border-radius: 50%;
+}
+
+.status-true-button::after {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.137);
+  content: "";
+  filter: blur(1px);
+  bottom: 7px;
+  border-radius: 50%;
+}
+
+.status-true-button:hover {
+  animation: jello-horizontal 0.9s both;
+}
+
+.divColor{
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
