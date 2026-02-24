@@ -29,7 +29,6 @@ export default function GridLayout() {
       setStatus("status-false")
       setTextStatus("Keep Searching!")
       event.target.textContent = 'X'
-      setTimeout(() => setTextStatus(""), [1000])
     } else {
       // event.target.style.backgroundColor = randomColor()
       setStatus("status-true")
