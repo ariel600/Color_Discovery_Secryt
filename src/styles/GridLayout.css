@@ -89,6 +89,7 @@
 }
 
 .status-true-button {
+  margin-top: 5px;
   position: relative;
   width: 150px;
   height: 55px;
