@@ -32,7 +32,7 @@ export default function GridLayout() {
     } else {
       event.target.style.backgroundColor = color.current
       setStatus("status-true")
-      setTextStatus("You have a victory! 🤩")
+      setTextStatus("You won! 🤩")
       event.target.className = 'cell v'
     }
   }
